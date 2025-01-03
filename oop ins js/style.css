@@ -1,0 +1,70 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; outline: none;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    border: 1px solid darkblue;
+    border-radius: 10px;
+}
+.container h1{
+  padding: 15px;
+  background: darkblue;
+  font-size: 2.5em;
+  color: seashell;
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+
+.container form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.container form .form-group{
+    flex: 0 1 45%;
+}
+.container form .form-group input[type='text']{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid darkblue;
+    padding-left: 25px;
+    font-size: 1.3rem;
+}
+.container form .form-group:last-of-type{
+    flex-basis: 100% ;
+}
+.container form button{
+    padding: 15px 25px;
+    background: darkblue;
+    color: seashell;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+.container .bookinfo table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.container .bookinfo table td, .container .bookinfo table th{
+    border: 1px solid darkblue;
+    padding: 15px;
+    text-align: center;
+}
+.container .bookinfo table thead{
+    background: darkblue;
+    color: white;
+}
+.container .bookinfo table thead th{
+    border-color: white;
+}

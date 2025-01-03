@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #275c50;
+}
+.row{
+    background: #fff;
+    max-width: 400px;
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+.task{
+    padding: 7px;
+    border-radius: 9px;
+    background: #275c50;
+    color: #fff;
+    outline: none;
+    border: 2px solid #275c50;
+}
+#displayOutput{
+    padding: 2px;
+}
+.output table{
+    width: 100%;
+}
+.output{
+    /* display: none; */
+    margin-top: 10px;
+}
+.output table tr th:nth-child(2n){
+ text-align: right;
+}
+
+.output table th:first-child{
+    text-align: left;
+   }
+#output{
+
+    text-align: left;
+}
+.btn-danger{
+    background: #275c50;
+    color: #fff;
+    border: none;
+    padding: 9px;
+    border-radius: 4px;
+    text-align: right;
+    /* position: absolute; */
+    margin-left: 200px;
+    text-align: right;
+
+}

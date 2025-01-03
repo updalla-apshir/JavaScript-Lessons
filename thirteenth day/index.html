@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Word Guesser Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input[type='text'] {
+            width: 70%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+            padding-left: 10px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: #fff;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .message {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .guessed-word {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Word Guesser Game</h1>
+        <p>Enter 2 or 3 letters at a time to complete the word</p>
+        <div class="guessed-word"></div>
+        <form>
+            <input type="text" placeholder="Enter 2 or 3 letters" id="input">
+            <input type="submit" id="btn" value="Guess">
+        </form>
+        <p class="message"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+*{margin: 0;padding: 0; font-family: Arial, Helvetica, sans-serif; box-sizing: border-box;}
+
+.listSuradaha{
+    width: 300px;
+    background-color: darkblue;
+    padding: 10px;
+}
+.listSuradaha h3{
+    color: white;
+    font-size: 2em;
+}
+.listSuradaha .surado{
+    width: 100%;
+    list-style: none;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 0 10px;
+    padding-bottom: 70px;
+}
+.listSuradaha li{
+    padding: 10px;
+    background: seashell;
+    margin:10px auto;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    cursor: pointer;
+
+}
+
+.main{
+    width: calc(100% - 300px);
+    background: #ddd;
+    position: absolute;
+    left: 300px;
+    text-align: right;
+    line-height: 2;
+    padding-bottom: 50px ;
+    height:  100vh;
+    overflow-y: scroll;
+    padding: 0 12px;
+    
+}
+body{
+    display: flex;
+    overflow: hidden;
+}
+.ayado{
+  margin-top: 5.5em;
+  padding-top: 60px;
+}
+span{
+    /* margin-top: 4em; */
+    margin-bottom: 2em;
+    /* float: right; */
+    /* margin-right: 20px; */
+    /* text-align: right; */
+    /* margin-left: 20px; */
+    font-size: 1em;
+    margin-top: 17px;
+    /* position: relative;
+    top: 3em; */
+    /* overflow-x: hidden; */
+    /* padding: 0 12px; */
+}
+
+audio {
+  width: 100%;
+}
+
+
+
+
+  /* h3{
+    margin-left: 20px;
+    font-size: 1.5em;
+  }
+   */
+ .numberSurah{
+    border: 1px solid #000;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    padding: 4px 10px;
+    color: #000;
+    /* font-size: 17px; */
+    /* margin:0 5px; */
+  }
+  h4{
+
+    font-size: 1.3em;
+  }
+  h4:last-child{
+    margin-right: 1.6em;
+  }
+  .main .top{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 300px;
+    right: 0;
+    z-index: 1;
+    background: #ddd;
+    top: 0;
+    /* margin: 0 15px ; */
+    flex-wrap: wrap;
+    padding: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+
+  }
+  .juz{
+    text-align: center;
+  }
+  .hisib{
+    text-align: center;
+    /* padding: 20px 0; */
+    /* margin-bottom: 20px ; */
+    margin-top: -15px;
+    /* font-size: 1.5em; */
+    font-weight: 800;
+    /* color: red; */
+  }
+  .juz{
+    /* font-size: 1.5em; */
+    font-weight: 800;
+    /* color: red; */
+    /* margin-top: 39px; */
+  }
+  .top h5{
+    font-size: 18px;
+  }
+  .top{
+    /* margin: 0 19px; */
+  }
+
+  .hide{
+    display: none;
+  }
+  button{
+    font-size: 1.6em;
+    outline: none;
+    border: none;
+    margin: 0 50px;
+    padding: 4px;
+    background: none;
+  }

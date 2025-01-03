@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //constants:
+        //represented mathmetical constant whth pi and and constant Euler's(e)
+
+        document.write(Math.PI + "<br>");//outputs=3.14..
+        document.write(Math.E + "<br>");//=2.718..
+
+        //methods:
+
+        //math.abs() :removes the operators and return absolute value of a number
+
+        document.write(Math.abs(-88.9)+'<br>')
+        //math.sqrt(x) : returns a square root of a number
+        document.write(Math.sqrt(260)+"<br>")
+
+        //math.pow(x,y): returns the result of raising x tho the power of y
+        document.write(Math.pow(4,6)+"<br>")
+
+        //math.floor : removes the points
+        document.write(Math.floor(38.9)+"<br>")
+
+        // math.ceil:returns the smallest integer greater than or equal to a given number
+        document.write(Math.ceil(6.4)+"<br>")
+
+        //math.random:returns a pseudo random number between 0 to 1
+        let min=5,max=10
+        document.write(Math.random()*(max-min)+min+"<br>")
+
+        document.writeln(Math.floor(Math.sqrt((Math.abs(-999,80))))+'<br>')
+
+
+        ////  js dates 
+
+
+
+
+        let myDate = new Date()
+        document.write(myDate.getFullYear()+'<br>')
+        document.write(myDate.getMonth()+1+'<br>')
+        document.write(myDate.getDate()+'<br>')
+        document.write(myDate.getDay()+'<br>')
+        document.write(myDate.getHours()+'<br>')
+        document.write(myDate.getMinutes()+'<br>')
+        document.write(myDate.getSeconds()+'<br>')
+
+        //error handling
+        try{
+            document,write('hello')
+        }
+        catch(error){
+            document.write("an error occured ")
+        }
+
+    </script>
+</body>
+</html>

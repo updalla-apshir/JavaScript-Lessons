@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="screen" name="screen">
+            <div class="top"></div>
+            <div class="bottom" style="float: right;"></div>
+        </div>
+        <button class="span2" onclick="clearScreen()">AC</button>
+        <button onclick="deleteChar()">Del</button>
+        <button onclick="screen('/')">/</button>
+        <button onclick="screen('1')">1</button>
+        <button onclick="screen('2')">2</button>
+        <button onclick="screen('3')">3</button>
+        <button onclick="screen('*')">*</button>
+        <button onclick="screen('4')">4</button>
+        <button onclick="screen('5')">5</button>
+        <button onclick="screen('6')">6</button>
+        <button onclick="screen('+')">+</button>
+        <button onclick="screen('7')">7</button>
+        <button onclick="screen('8')">8</button>
+        <button onclick="screen('9')">9</button>
+        <button onclick="screen('-')">-</button>
+        <button onclick="screen('.')">.</button>
+        <button onclick="screen('0')">0</button>
+        <button class="span2" onclick="calculateResult()">=</button>
+    </div>
+
+    <script>
+        function clearScreen() {
+            document.querySelector('.top').innerText = '';
+            document.querySelector('.bottom').innerText = '';
+        }
+
+        function deleteChar() {
+            var currentText = document.querySelector('.bottom').innerText;
+            var topper = document.querySelector('.top').innerText;
+            document.querySelector('.bottom').innerText = currentText.slice(0, -1);
+            document.querySelector('.top').innerText = topper.slice(0, -1);
+        }
+
+        function screen(value) {
+            if (isOperator(value)) {
+                var topText = document.querySelector('.top').innerText;
+                if (!topText.includes(value)) {
+                    document.querySelector('.top').innerText += ' ' + document.querySelector('.bottom').innerText + ' ' + value;
+                    document.querySelector('.bottom').innerText = '';
+                }
+            } else {
+                document.querySelector('.bottom').innerText += value;
+            }
+        }
+
+
+
+        function calculateResult() {
+            var expression = document.querySelector('.top').innerText + ' ' + document.querySelector('.bottom').innerText;
+            try {
+                var result = eval(expression);
+                document.querySelector('.top').innerText = '';
+                document.querySelector('.bottom').innerText = result;
+            } 
+            catch (error) {
+                document.querySelector('.top').innerText = 'Error';
+                document.querySelector('.bottom').innerText = '';
+            }
+        }
+
+        function isOperator(value) {
+            return ['+', '-', '*', '/'].includes(value);
+        }
+    </script>
+</body>
+</html>

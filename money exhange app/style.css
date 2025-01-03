@@ -1,0 +1,54 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: blue;
+}
+.container {
+    max-width: 400px;
+    margin: 120px auto;
+    text-align: center;
+    background: #fff;
+    padding: 20px 25px;
+    text-align: left;
+    border-radius: 6px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.exchange-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.form-group{
+   width: 100%;
+   
+    
+}
+input,
+select,
+button {
+    margin-bottom: 10px;
+    width: 95%;
+    padding: 4px;
+}
+
+#result {
+    font-size: 18px;
+}
+button{
+    background: darkblue;
+    color: #fff;
+    border: none;
+    padding: 7px 4px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    width: 100%;
+}

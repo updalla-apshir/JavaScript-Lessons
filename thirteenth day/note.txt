@@ -1,0 +1,6 @@
+Number Guessor App.
+1. computer ka wuxuu qabasnayaa number u dhexeeya Range.
+2. Player kuna wuxuu heestaa 3 jaanis
+3. App ku wuxuu ogeysiinaa player ka in uu guulestay marka ay isla ekaadaan number computer ku qasday iyo kan player ku soo galiyey.
+4. App ku wuxuu player ka u sheegayaa in uu qasaariyey janiskiisa iyo inta u hartay.
+5.  hadii janiskii player ka uu dhamaday App. wuxuu soo bandhigi doona in uu guul dareystay iyo jawaabta saxda ah. wuxuuna u ogalaan doonaa player ka in uu soo bilaabi karo ciyaarta.

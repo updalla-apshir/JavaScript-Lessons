@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Exchange App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Money Exchange App</h1>
+        <label for="amount">Enter Amount:</label>
+        <input type="number" id="amount">
+        <div class="exchange-form">
+            <div class="form-group">
+            <label for="from">From Currency:</label>
+            <select id="from"></select>
+            </div>
+            
+            <div class="form-group">
+            <label for="to">To Currency:</label>
+            <select id="to"></select>
+        </div>
+        </div>
+        <button onclick="convertCurrency()">Convert</button>
+        <div id="result"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

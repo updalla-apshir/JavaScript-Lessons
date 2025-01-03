@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch">
+        <h1 id="display">00:00:00:000</h1>
+        <div class="buttons">
+            <i class="fa-regular fa-circle-pause" id="pause-timer"></i>
+            <i class="fa-solid fa-circle-play" id="start-timer"></i>
+            <i class="fa-solid fa-rotate-right" id="reset-timer"></i>
+        </div>
+    </div>
+
+    <script>
+        let [milliseconds,secons,minutes,hours]=[0,0,0,0];
+        let timeRef = document.querySelector("#display");
+        let int = null;
+
+        document.querySelector('#start-timer').addEventListener('click',()=>{
+            if(int !== null){
+                clearInterval(int)
+            }
+            int = setInterval (displayTimer,10);
+        })
+        document.querySelector('#pause-timer').addEventListener('click',()=>{
+            clearInterval(int)
+        });
+        document.querySelector('#reset-timer').addEventListener('click',()=>{
+            clearInterval(int);
+            [milliseconds,secons,minutes,hours]=[0,0,0,0];
+            timeRef.innerHTML="00:00:00:00";
+        });
+
+        function displayTimer(){
+            milliseconds += 10;
+            if(milliseconds == 1000){
+                milliseconds = 0;
+                secons++;
+                if(secons == 60){
+                    secons = 0;
+                    minutes++;
+                    if(minutes == 60){
+                        minutes = 0;
+                        hours++
+                    }
+                }
+            }
+            let h = hours <10 ? "0" + hours :hours;
+            let m = minutes <10 ? "0" +minutes :minutes;
+            let s = secons <10 ? "0" +secons :secons;
+            let ms = milliseconds <10 ? "00" +milliseconds :milliseconds  <100 ? "0" + milliseconds :milliseconds;
+
+            timeRef.innerHTML = `${h} : ${m}: ${s} : ${ms}`; 
+        }
+    </script>
+</body>
+</html>
